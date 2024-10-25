@@ -1,0 +1,13 @@
+.hero-top {
+  width: fit-content;
+  .hero-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 8rem;
+    height: 8rem;
+    background-color: darkslategray;
+    color: white;
+    cursor: pointer;
+  }
+}

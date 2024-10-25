@@ -1,0 +1,19 @@
+<div
+  *ngIf="hero$ | async as hero; else notFound"
+  [formGroup]="form"
+  class="hero-details"
+>
+  <h2>{{ hero.name }} details!</h2>
+  <p><span>id: </span>{{ hero.id }}</p>
+  <p>
+    <span>name: </span>
+    <input formControlName="name" type="text" />
+  </p>
+
+  <button (click)="back()" class="btn btn-light mt-3 me-1">Back</button>
+  <button (click)="save()" class="btn btn-primary mt-3">Save</button>
+</div>
+
+<ng-template #notFound>
+  <p>Hero not found.</p>
+</ng-template>

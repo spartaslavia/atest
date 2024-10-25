@@ -1,0 +1,10 @@
+<div class="hero-card d-flex flex-row m-1">
+  <div class="p-2 rounded-start-1 hero-id">{{ hero.id }}</div>
+  <div
+    class="p-2 rounded-end-1 hero-name"
+    [libLongName]="hero.name"
+    [ngClass]="{ selected: isSelected }"
+  >
+    {{ hero.name }}
+  </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="hero-top">
+  <div class="d-flex flex-column text-center">
+    <h1>TopHeroes</h1>
+    <div class="d-flex flex-row">
+      <div
+        *ngFor="let item of heroes$ | async"
+        (click)="select(item.id)"
+        [libLongName]="item.name"
+        class="hero-item mt-3 me-1"
+      >
+        {{ item.name }}
+      </div>
+    </div>
+  </div>
+</div>

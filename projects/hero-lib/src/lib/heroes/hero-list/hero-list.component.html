@@ -1,0 +1,17 @@
+<div class="heroes-list">
+  <h1>My Heroes</h1>
+  <lib-hero-card
+    *ngFor="let hero of heroes$ | async"
+    [hero]="hero"
+    [isSelected]="selected && selected.id === hero.id"
+    (click)="select(hero)"
+  ></lib-hero-card>
+
+  <ng-container *ngIf="selected">
+    <h3 class="mt-3">{{ selected.name.toUpperCase() }} is my hero</h3>
+
+    <button [routerLink]="['/details', selected.id]" class="btn btn-light mt-3">
+      View Details
+    </button>
+  </ng-container>
+</div>
